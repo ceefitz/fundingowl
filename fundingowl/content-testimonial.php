@@ -1,14 +1,11 @@
 <?php 
-
   $num_posts = ( is_front_page() ) ? 4 : -1;
-
   $args = array(
     'post_type' => 'testimonials',
     'post_parent' => 0,
     'posts_per_page' => 1,
   );
   $query = new WP_Query( $args );
-
 ?>
       <div class="flexitem" id="testimonial">
       <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>

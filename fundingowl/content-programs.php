@@ -12,7 +12,7 @@
 ?>
 
 <section class="industry">
-  <div class="flex-wrapper">
+  <div class="other-wrapper">
   <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
     <div class="box">
       <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?>

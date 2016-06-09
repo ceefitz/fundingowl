@@ -7,7 +7,8 @@ echo get_header("home"); } ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<p><?php the_content(); ?></p>  
+	<p><?php the_content(); ?></p>
+	</section> 
 
 		<section class="threeColumn">
 		<div class="home-flex-wrapper" id="content">
@@ -70,7 +71,7 @@ echo get_header("home"); } ?>
 		</div>
 	</div>
 	<h1><a href="http://fundingowl.ca/funding-programs/">Search for more funding programs</a></h1>
-	</section>
+	
 
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

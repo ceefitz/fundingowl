@@ -125,6 +125,7 @@
 
           var stickyId = stickyElement.attr('id');
           var stickyHeight = stickyElement.outerHeight();
+
           var wrapperId = stickyId ? stickyId + '-' + defaults.wrapperClassName : defaults.wrapperClassName
           var wrapper = $('<div></div>')
             .attr('id', wrapperId)
@@ -142,7 +143,7 @@
             stickyElement.css({"float":"none"}).parent().css({"float":"right"});
           }
 
-          stickyWrapper.css('height', stickyHeight);
+          stickyWrapper.css('min-height', stickyElement.outerHeight());
 
           o.stickyElement = stickyElement;
           o.stickyWrapper = stickyWrapper;

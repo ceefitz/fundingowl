@@ -7,22 +7,21 @@ echo get_header("home"); } ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<p><?php the_content(); ?></p>
+	<p><?php the_content(); ?></p> 
 	</section> 
 
-		<section class="threeColumn">
+	<section class="threeColumn">
 		<div class="home-flex-wrapper" id="content">
 		        <div class="flexitem" ID="blogPreview">
 		        <h3>Recent Posts</h3>
 			        
 					<?php
-						 $postslist = get_posts('numberposts=1&order=DESC&orderby=date');
+						 $postslist = get_posts('numberposts=2&order=DESC&orderby=date');
 						 foreach ($postslist as $post) :
 						    setup_postdata($post);
 						 ?>
 						 	<?php the_post_thumbnail('small'); ?>
 						 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						 <?php the_time(get_option('date_format')) ?>
 						 
 					<?php endforeach; ?>
 				</div>
@@ -71,7 +70,7 @@ echo get_header("home"); } ?>
 		</div>
 	</div>
 	<h1><a href="http://fundingowl.ca/funding-programs/">Search for more funding programs</a></h1>
-	
+	</section>
 
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

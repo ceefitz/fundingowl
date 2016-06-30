@@ -14,7 +14,7 @@ echo get_header(); } ?>
         
         <div class="primary">
 
-		      <?php the_field('images'); ?>	   
+		      <?php the_field('images'); ?> 
        	</div>
 
    		<div class="secondary">
@@ -27,10 +27,14 @@ echo get_header(); } ?>
 				<?php next_post_link(); ?>
 			</p>
 		</div>
-		<h2>Grant programs in this category</h2>
-		<?php get_template_part('content', 'child'); ?>
+		
+		<?php if ( $post->post_parent > 0 )  { 
+    	echo "";}
+    	else {
+		echo get_template_part('content', 'child'); }?>
 		
    		<?php endwhile; endif; ?>
+
     </section>
 
 <?php get_template_part('content', 'cta'); ?>

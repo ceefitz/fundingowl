@@ -13,6 +13,7 @@
 ?>
 
 <section class="programs">
+  <h2>Grant programs in this category</h2>
 	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
     <div class="box">
       <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?>

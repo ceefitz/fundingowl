@@ -41,6 +41,9 @@ h4{
     margin: 0 auto;
     padding: 10px;
 }
+  .box{
+    margin: 20px;
+  }
 h5{
   font-size: 12px;
 }
@@ -131,21 +134,7 @@ figure.testimonial_bubble:after {
 .industry-cta{
     min-height: 300px;
     background-color: #3299BB;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    /* display: flex; */
-    /* -webkit-box-pack: center; */
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
+    
 }
 .industry-cta .content-wrapper{
       display: -webkit-box;
@@ -182,7 +171,7 @@ figure.testimonial_bubble:after {
 }
 .content-wrapper h2 {
     margin-top: 0;
-    width: 100%;
+    width: 80%;
     color: white;
     text-transform: uppercase;
     font-weight: 400;
@@ -326,6 +315,10 @@ hr.home{
 }
 
 /*Programs page*/
+  .programs-single h2{
+        text-align: center;
+    width: 100%;
+  }
 .programs{
     width: 100%;
     display: flex;
@@ -596,11 +589,11 @@ a{
 
 .img-container{
     margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
 }
 .img-container img{
-  width: 100%;
-    height: 200px;
+    height: inherit;
+    width: 100%;
     background-size: cover;
     border-radius: 2px;
     background-position: center center;
@@ -614,6 +607,7 @@ a{
 }
 #sidebar-three{
   margin-left: 40px;
+  margin-top: 20px;
 }
 
 .secondary li.cat-item {
@@ -737,6 +731,9 @@ nav a {
   top: 0px;
   width: calc(100% - 25rem);
 
+}
+#navwrapper{
+  height:inherit;
 }
 .navbar ul{
       height: 100%;
@@ -878,11 +875,24 @@ nav a {
     }
   /*media.scss*/
 
-@media only screen and (max-width: 960px){
-
-  
+@media only screen and (max-width: 1100px){
+  #sidebar-three{
+    margin-left: 5px;
+    width:100%;
+  }
+  .programs-single .box{
+    margin-left: 10px !important;
+  }
+  .industry{
+    margin-left: 10px !important;
+  }
+  .home{
+    margin: 0 auto;
+  }
   .programs-single .programs .box img{
-    margin-left: 15px !important;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
   }
   .other-wrapper{
     margin: 0px !important;
@@ -893,7 +903,10 @@ nav a {
   .homebox, .box{
     flex: 100% !important;
     width: 100% !important;
+    margin-left: 0px !important;
+    margin-bottom: 50px;
   }
+
   header .kont video{
     height: 300px;
     padding-top: 50px;
@@ -912,6 +925,7 @@ nav a {
 
   .copy-icon img{
     display: none;
+        
   }
   .dashed-features-item-copy ul{
     list-style-type: none;
@@ -927,6 +941,9 @@ nav a {
     flex-direction: column;
     -webkit-flex-direction: column;
     margin: 0 auto;
+  }
+  #statSection img{
+    width: 100%;
   }
   .blogPreview{
     margin: 0 auto;
@@ -958,9 +975,7 @@ nav a {
     margin: 0 auto;
     text-align: center;
   }
-  .programs-single h2{
-    text-align: center;
-  }
+
   .programs-single .secondary{
     width: 100% !important;
     display: block;
@@ -1001,11 +1016,11 @@ nav a {
  
     .navbar{
       position: fixed;
+      display: none;
     }
     #navwrapper{
       display: flex;
       flex-direction: column;
-      height: inherit;
     }
     section.topBlurb, div.topBlurb{
       width: 90%;
@@ -1142,8 +1157,6 @@ nav a {
     flex-wrap: wrap;
     -webkit-justify-content: center;
     text-align: center;
-    margin-left: -80px;
-    margin-right: -80px;
 }
 .other-wrapper{
   display: -webkit-flex;
@@ -1153,9 +1166,7 @@ nav a {
     -webkit-justify-content: center;
     margin: 50px;
 }
-.box{
-  margin: 20px;
-}
+
 
 .homebox {
     margin: -1px 0 0 -1px;
@@ -1247,14 +1258,25 @@ nav a {
     text-align: center;
 }
 .programs-single{
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
     display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
     -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-justify-content: center;
     padding: 80px;
+}
+.programs-single h2{
+    margin: 0 auto;
 }
 .programs-single .primary{
   width: 50%;
@@ -1262,9 +1284,6 @@ nav a {
 .programs-single .secondary{
   width: 40%;
   padding-right: 50px;
-}
-.programs-single .programs .box img{
-  margin-left: 49px;
 }
 
 .programs figure {
@@ -1389,6 +1408,7 @@ h6{
     max-width: 500px;
     margin-top: -50px;
     z-index: -1;
+    
 }
 .dashed-features-item-copy {
     width: 45%;
